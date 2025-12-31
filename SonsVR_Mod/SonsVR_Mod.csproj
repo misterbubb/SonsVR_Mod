@@ -1,0 +1,767 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>SonsVRMod</RootNamespace>
+		<LangVersion>default</LangVersion>
+		<IsPackable>false</IsPackable>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<PackageId>SonsVR_Mod</PackageId>
+	</PropertyGroup>
+	<ItemGroup>
+	  <EmbeddedResource Remove="Libs\**" />
+	  <None Remove="Libs\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAdvancedTerrainGrass">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppAdvancedTerrainGrass.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAmplifyImposters">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppAmplifyImposters.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAnimatorEvent">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppAnimatorEvent.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppAstarPathfindingProject">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppAstarPathfindingProject.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBacktrace.Unity">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppBacktrace.Unity.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBlobNetworking">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppBlobNetworking.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppbolt">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2Cppbolt.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBolt.Unity">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppBolt.Unity.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppbolt.user">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2Cppbolt.user.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppBulletBallistics">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppBulletBallistics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppcom.alteregogames.aeg-fsr.Runtime">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2Cppcom.alteregogames.aeg-fsr.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppcom.alteregogames.aeg-fsr.Runtime.HDRP">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2Cppcom.alteregogames.aeg-fsr.Runtime.HDRP.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppcom.rlabrecque.steamworks.net">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2Cppcom.rlabrecque.steamworks.net.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCommandLine">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppCommandLine.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCrest">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppCrest.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCrest.Examples">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppCrest.Examples.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDigitalRuby.ProceduralLightning">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppDigitalRuby.ProceduralLightning.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDrawing">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppDrawing.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDynamicBone">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppDynamicBone.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEndnight.Backtrace">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppEndnight.Backtrace.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEndnight">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppEndnight.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEndnight.Localization">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppEndnight.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEndnight.PrefabStore">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppEndnight.PrefabStore.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEndnight.Utilities.CommandLine">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppEndnight.Utilities.CommandLine.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEndnight.Utilities.Configurations">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppEndnight.Utilities.Configurations.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEndnight.Utilities.Dedicated">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppEndnight.Utilities.Dedicated.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEndnight.Utilities.Logging">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppEndnight.Utilities.Logging.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEndnight.Utilities.Misc">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppEndnight.Utilities.Misc.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFMOD.Unity">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppFMOD.Unity.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppLocomotion">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppLocomotion.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMicroSplatChanges">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppMicroSplatChanges.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMono.Security">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppMono.Security.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppmscorlib">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMultiplayer.Dedicated">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppMultiplayer.Dedicated.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNatureManufacture.SplineSystem">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNatureManufacture.SplineSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNewtonsoft.Json">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNewtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNWH.Common.AssetInfo">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNWH.Common.AssetInfo.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNWH.Common.Cameras">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNWH.Common.Cameras.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNWH.Common.CoM">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNWH.Common.CoM.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNWH.Common.Demo">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNWH.Common.Demo.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNWH.Common.FloatingOrigin">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNWH.Common.FloatingOrigin.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNWH.Common.Input">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNWH.Common.Input.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNWH.Common.NUI">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNWH.Common.NUI.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNWH.Common.SceneManagement">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNWH.Common.SceneManagement.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNWH.Common.Utility">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNWH.Common.Utility.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNWH.Common.Vehicle">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNWH.Common.Vehicle.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNWH.DWP2">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppNWH.DWP2.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppObi">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppObi.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppOSK">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppOSK.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPackageTools">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppPackageTools.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPathCreator">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppPathCreator.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPathfinding.ClipperLib">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppPathfinding.ClipperLib.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPathfinding.Ionic.Zip.Reduced">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppPathfinding.Ionic.Zip.Reduced.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPathfinding.Poly2Tri">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppPathfinding.Poly2Tri.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppPathologicalGames">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppPathologicalGames.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppRenderStreamDepth">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppRenderStreamDepth.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppRootMotion">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppRootMotion.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppShapesRuntime">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppShapesRuntime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppShapesSamples">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppShapesSamples.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSirenix.OdinInspector.Attributes">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSirenix.OdinInspector.Attributes.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Ai.Utilities">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Ai.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Ai.Vail">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Ai.Vail.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Animation.Mae">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Animation.Mae.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Areas">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Areas.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Atmosphere">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Atmosphere.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Attributes">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Attributes.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Cinematics">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Cinematics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Construction">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Construction.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Construction.Utils">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Construction.Utils.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.ConstructionBoltToken">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.ConstructionBoltToken.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Crest">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Crest.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Debug">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Debug.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Dlss">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Dlss.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Electricity">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Electricity.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Environment">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Environment.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Events">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Events.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Extensions">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Extensions.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.FieldOfView">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.FieldOfView.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.FMOD">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.FMOD.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.FpsUtility">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.FpsUtility.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.GameApplication">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.GameApplication.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Gameplay.GameSetup">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Gameplay.GameSetup.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Gameplay.LevelProps">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Gameplay.LevelProps.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Gameplay.StatusEffects">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Gameplay.StatusEffects.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Geometry">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Geometry.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Gui.Colors">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Gui.Colors.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Gui">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Gui.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Gui.Multiplayer">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Gui.Multiplayer.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Gui.Multiplayer.Notifications">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Gui.Multiplayer.Notifications.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Gui.Options">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Gui.Options.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Gui.VersionUpgrade">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Gui.VersionUpgrade.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Hardware">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Hardware.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Input">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Input.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Interfaces">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Interfaces.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Item">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Item.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Loading">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Loading.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Lodding">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Lodding.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Multiplayer.Configurations">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Multiplayer.Configurations.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Multiplayer">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Multiplayer.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Multiplayer.NamedIntIds">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Multiplayer.NamedIntIds.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.ObsoleteMonos">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.ObsoleteMonos.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Physics">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Physics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.PostProcessing">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.PostProcessing.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.PostProcessing.FoundFootage">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.PostProcessing.FoundFootage.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Quality">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Quality.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Ragdoll">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Ragdoll.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Rendering">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Rendering.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Rocks">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Rocks.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Save">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Save.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Scratchpad">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Scratchpad.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Settings">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Settings.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.SettingsWrappers">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.SettingsWrappers.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.SonsTerrain">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.SonsTerrain.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.StatSystem">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.StatSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.SteamTimelineExtended">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.SteamTimelineExtended.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Subtitles">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Subtitles.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Subtitles.Tooling">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Subtitles.Tooling.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Testing">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Testing.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Tests">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Tests.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Trees">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Trees.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.UiElements">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.UiElements.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Utilities">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.VFX">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.VFX.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.VFX.SimpleUnderwater">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.VFX.SimpleUnderwater.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSons.Weapon">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSons.Weapon.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSonsTerrainScripts">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSonsTerrainScripts.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppStreamingAssetsManager">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppStreamingAssetsManager.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Configuration">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSystem.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Core">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSystem.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Data">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSystem.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.IO.Compression">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSystem.IO.Compression.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.IO.Compression.FileSystem">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSystem.IO.Compression.FileSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Numerics">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSystem.Numerics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Runtime.Serialization">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSystem.Xml.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml.Linq">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppSystem.Xml.Linq.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppTayx.Graphy">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppTayx.Graphy.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppTheForest.Commons">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppTheForest.Commons.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppTheForest.Modding">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppTheForest.Modding.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppTheForest.Utils">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppTheForest.Utils.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppudpkit.common">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2Cppudpkit.common.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppudpkit">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2Cppudpkit.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppUpgen.Lighting">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppUpgen.Lighting.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVFXGraph.OutputEventHandlers">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppVFXGraph.OutputEventHandlers.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppVolumetricBloodFX">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2CppVolumetricBloodFX.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cpp__Generated">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Il2Cpp__Generated.dll</HintPath>
+		</Reference>
+		<Reference Include="SonsSteamVR_IL2CPP">
+		  <HintPath>MelonLoaderUserLibs\SonsSteamVR_IL2CPP.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Addressables">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.Addressables.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.Burst.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst.Unsafe">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.Burst.Unsafe.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.Collections.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Collections.LowLevel.ILSupport">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.CrossSceneReference">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.CrossSceneReference.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.InputSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Localization">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Mathematics">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.Mathematics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.BatchRendererGroup-Testing">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.BatchRendererGroup-Testing.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.Runtime">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ResourceManager">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.ResourceManager.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Splines">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.Splines.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Timeline">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualEffectGraph.Runtime">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AccessibilityModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.AccessibilityModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AIModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.AIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AndroidJNIModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.AndroidJNIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ARModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.ARModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClothModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.ClothModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ContentLoadModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.ContentLoadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CrashReportingModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.CrashReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DirectorModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.DirectorModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DSPGraphModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.DSPGraphModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GameCenterModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.GameCenterModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GIModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.GIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GridModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.GridModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HotReloadModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.HotReloadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IMGUIModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.JSONSerializeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.NVIDIAModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.NVIDIAModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PerformanceReportingModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.PerformanceReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ProfilerModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.ProfilerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PropertiesModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.PropertiesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScreenCaptureModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.ScreenCaptureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SharedInternalsModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.SharedInternalsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteMaskModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteMaskModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteShapeModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteShapeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.StreamingModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.StreamingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubstanceModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.SubstanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubsystemsModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.SubsystemsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainPhysicsModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreFontEngineModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreTextEngineModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TilemapModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.TilemapModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TLSModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.TLSModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UmbraModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UmbraModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConnectModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UnityConnectModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityCurlModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UnityCurlModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityTestProtocolModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VehiclesModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.VehiclesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VFXModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.VFXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VideoModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.VideoModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VRModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.VRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.WindModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.WindModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.XRModule">
+			<HintPath>G:\Sons of the Forest\MelonLoader\Il2CppAssemblies\UnityEngine.XRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="MelonLoader">
+			<HintPath>G:\Sons of the Forest\MelonLoader\net6\MelonLoader.dll</HintPath>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>G:\Sons of the Forest\MelonLoader\net6\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Runtime">
+			<HintPath>G:\Sons of the Forest\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Common">
+			<HintPath>G:\Sons of the Forest\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
+		</Reference>
+
+	</ItemGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="Input\NativeVRInput.cs" />
+		<Compile Include="Input\KeyboardHack.cs" />
+		<Compile Include="ReflectionUtil.cs" />
+		<Compile Include="SonsVRMod.cs" />
+		<Compile Include="StereoRender.cs" />
+		<Compile Include="Utils.cs" />
+		<Compile Include="Input\VRInput.cs" />
+		<Compile Include="VRPlayer.cs" />
+		<Compile Include="VRSystem.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Actions\" />
+	</ItemGroup>
+	
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;G:\Sons of the Forest\Mods&quot;" />
+	</Target>
+</Project>
