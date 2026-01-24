@@ -74,6 +74,10 @@ namespace SonsVRMod
 
         #endregion
 
+        
+        private float _lastMouseUpdateTime = 0f;
+        private const float MouseUpdateInterval = 0.5f; // 100 ms → 10 Hz
+        
         /// <summary>
         /// Called after the game has finished its initial startup sequence.
         /// This is where mod initialization begins.
@@ -257,6 +261,7 @@ namespace SonsVRMod
                 VRPlayer.Instance.StereoRender.stereoRenderPass != null)
             {
                 VRPlayer.Instance.StereoRender.stereoRenderPass.Execute();
+                VRPlayer.Instance.kh = kh;
             }
         }
 

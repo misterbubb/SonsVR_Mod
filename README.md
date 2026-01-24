@@ -8,7 +8,7 @@ Built with **MelonLoader**, **Il2CppInterop**, and **SteamVR Plugin**, it replac
 
 ---
 
-## ✅ Current Features (0.0.1 Alpha)
+## ✅ Current Features (0.0.2 Alpha)
 
 - **Full Stereo Rendering**  
   Custom left/right eye cameras with OpenVR projection matrices, dynamic resolution scaling, and native texture submission to the compositor.
@@ -27,6 +27,48 @@ Built with **MelonLoader**, **Il2CppInterop**, and **SteamVR Plugin**, it replac
     - **Interact/Use**: Squeeze **left or right grip** → mapped to `E`
     - **Inventory**: Press **Y button (left controller)** → mapped to `I`
     - **Crouch**: Push **right thumbstick down** → mapped to `Left Ctrl`
+
+
+- **Action and Key Mapping**
+- FORWARD: W Key              : Left.Thumb-UP 
+- BACKWARD: S Key             : Left.Thumb-DoWN
+- RIGHT: D Key                : Left.Thumb-RIGHT 
+- LEFT: A Key                 : Left.Thumb-LEFT 
+- CROUCH: Left Ctrl Key       : Right.Thumb-DOWN
+- DROP: G Key                 : Left.GRIP or Right.GRIP  Long grip release 
+- INVENTORY: I Key            : Left.Y-BUTTON 
+- JUMP: Space Bar Key         : "GESTURE MUVE UP BOTH MC"
+- LIGHTER: L Key              : Right.B-BUTTON
+- RELOAD: R Key               : Right.A-BUTTON
+- RUN: Left Shift Key         : Right.Thumb-UP
+- TAKE: E Key                 : Left.GRIP or Right.GRIP
+- DISMANTLE: C Key 
+- UTILITY: UNBOUND 
+- GPS TRACKER: M Key          : Left.GRIP on Right Sholder 
+- WALKIE-TALKIE: T Key        : Right.GRIP on Left Sholder 
+- BOOK: B Key                 : Right.GRIP on Right Sholder
+- ROTATE RIGHT: R Key         : Right.A-BUTTON
+- ROTATE LEFT: Q Key 
+- PRIMARY ACTION: LMB         : Right.TRIGGER
+- SECONDARY ACTION: RMB       : Left.TRIGGER  and "MELE ATTACK GESTURE"
+- INTERACT: LMB               : Right.TRIGGER 
+- ALTERNATE INTERACT: RMB     : Left.TRIGGER
+- PLACE ELEMENT: LMB          : Right.TRIGGER 
+- TOGGLE PLACE MODE: RMB      : Left.TRIGGER 
+- TERTIARY ACTION: MMB 
+- SLEEP: Z Key
+- SAVE: E Key                 : Left.GRIP or Right.GRIP 
+- SKIP: S Key                 : Left.Thumb-DoWN
+- RESET: UNBOUND 
+- SELECT: E Key               :Left.GRIP or Right.GRIP 
+- BACK: Left Arrow Key 
+- CANCEL STRUCTURE: X Key 
+- TOGGLE BOOK MODE: X Key 
+- BOOK FLIP NEXT PAGE: RMB     : Left.TRIGGER 
+- BOOK FLIP PREVIOUS PAGE: LMB : Right.TRIGGER 
+- PLAC: C Key 
+- CYCLE GRAB BAG CATEGORY: Q Key
+
 
 - **Automatic Camera & Player Detection**  
   Dynamically finds the game’s `MainCameraFP` and `LocalPlayer` across scenes (main world, caves, interiors).

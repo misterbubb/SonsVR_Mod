@@ -57,12 +57,12 @@ namespace SonsVRMod
         /// <summary>
         /// Near clipping plane distance (in meters).
         /// </summary>
-        private float clipStart = 0.1f;
+        private float clipStart = 0.015f;
 
         /// <summary>
         /// Far clipping plane distance (in meters).
         /// </summary>
-        private float clipEnd = 1000f;
+        private float clipEnd = 24000f;
 
         /// <summary>
         /// Culling mask used by the original game camera.
@@ -103,10 +103,10 @@ namespace SonsVRMod
             MelonLogger.Msg($"[StereoRender] ### SETTING UP STEREO RENDERING PIPELINE ###");
 
             // Create or find the HMD transform
-            Head = transform.Find("Head");
+            Head = transform.Find("VRHead");
             if (!Head)
             {
-                Head = new GameObject("Head").transform;
+                Head = new GameObject("VRHead").transform;
             }
             Head.SetParent(transform, false);
             Head.localPosition = Vector3.zero;
@@ -116,10 +116,10 @@ namespace SonsVRMod
             Head.gameObject.GetOrAddComponent<SteamVR_TrackedObject>().index = SteamVR_TrackedObject.EIndex.Hmd;
 
             // --- LEFT EYE ---
-            var leftEye = Head.Find("LeftEye");
+            var leftEye = Head.Find("VRLeftEye");
             if (!leftEye)
             {
-                leftEye = new GameObject("LeftEye").transform;
+                leftEye = new GameObject("VRLeftEye").transform;
             }
             leftEye.SetParent(Head, false);
             leftEye.localPosition = new Vector3(-separation * 0.5f, 0, 0); // Offset left
@@ -136,10 +136,10 @@ namespace SonsVRMod
             LeftCam.enabled = true;
 
             // --- RIGHT EYE ---
-            var rightEye = Head.Find("RightEye");
+            var rightEye = Head.Find("VRRightEye");
             if (!rightEye)
             {
-                rightEye = new GameObject("RightEye").transform;
+                rightEye = new GameObject("VRRightEye").transform;
             }
             rightEye.SetParent(Head, false);
             rightEye.localPosition = new Vector3(separation * 0.5f, 0, 0); // Offset right
